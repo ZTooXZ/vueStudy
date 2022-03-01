@@ -1,0 +1,30 @@
+<template>
+  <div class="col-xs-offset-2 col-xs-8">
+    <div class="page-header"><h2>Vue Router Demo</h2></div>
+    <hr/>
+    <button @click="back">后退</button>
+    <button @click="forward">前进</button>
+    <button @click="test">go</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Banner',
+  methods: {
+    back(){
+      this.$router.back()
+    },
+    forward(){
+      this.$router.forward()
+    },
+    test(){
+      this.$router.go(-2)  //负数为后退几步  正数为前进几步
+    },
+  },
+}
+</script>
+
+<style>
+
+</style>
